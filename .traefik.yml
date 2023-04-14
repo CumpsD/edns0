@@ -1,0 +1,9 @@
+displayName: Traefik EDNS0-ECS plugin
+type: middleware
+import: https://github.com/cumpsd/traefik-edns0-ecs-middleware
+summary: Don't install yet. Still in development.
+
+# Test data the plugin will use to test itself on startup
+testData:
+  routes:
+    http.test.com: asd
