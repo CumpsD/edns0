@@ -35,6 +35,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 	return &EdnsEcsPlugin{
 		next:   next,
 		name:   name,
+		config: config,
 		dnslog: dnslog,
 	}, nil
 }
