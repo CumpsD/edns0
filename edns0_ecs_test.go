@@ -1,4 +1,4 @@
-package edns0_ecs_test
+package edns0_test
 
 import (
 	"context"
@@ -6,17 +6,17 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	edns0_ecs "github.com/CumpsD/traefik-edns0-ecs-middleware"
+	"github.com/CumpsD/edns0"
 )
 
 func TestDemo(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})
 
-	cfg := edns0_ecs.CreateConfig()
+	cfg := edns0.CreateConfig()
 	cfg.Prefix = "TESTPREFIX"
 
-	handler, err := edns0_ecs.New(ctx, next, cfg, "edns0-ecs")
+	handler, err := edns0.New(ctx, next, cfg, "edns0")
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -4,7 +4,7 @@
 
 ```yaml
 additionalArguments:
-- "--experimental.plugins.edns0.moduleName=github.com/CumpsD/traefik-edns0-ecs-middleware"
+- "--experimental.plugins.edns0.moduleName=github.com/CumpsD/edns0"
 - "--experimental.plugins.edns0.version=v0.0.3"
 ```
 

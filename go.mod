@@ -1,3 +1,3 @@
-module github.com/CumpsD/traefik-edns0-ecs-middleware
+module github.com/CumpsD/edns0
 
 go 1.19

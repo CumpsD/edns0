@@ -1,4 +1,4 @@
-package edns0_ecs
+package edns0
 
 import (
 	"context"
@@ -19,7 +19,7 @@ func CreateConfig() *Config {
 	}
 }
 
-type EdnsEcsPlugin struct {
+type EdnsPlugin struct {
 	next   http.Handler
 	name   string
 	config *Config
@@ -32,7 +32,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 
 	dnslog.Println("EDNS0/ECS Plugin loaded")
 
-	return &EdnsEcsPlugin{
+	return &EdnsPlugin{
 		next:   next,
 		name:   name,
 		config: config,
@@ -40,7 +40,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 	}, nil
 }
 
-func (a *EdnsEcsPlugin) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (a *EdnsPlugin) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	a.dnslog.Println("Start of plugin handling the request")
 
 	a.dnslog.Printf(
