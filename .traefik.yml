@@ -1,6 +1,8 @@
 displayName: Traefik EDNS0-ECS plugin
 type: middleware
-import: https://github.com/cumpsd/traefik-edns0-ecs-middleware
+
+import: github.com/cumpsd/traefik-edns0-ecs-middleware
+
 summary: Don't install yet. Still in development.
 
 testData:
