@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	edns0_ecs "github.com/cumpsd/traefik-edns0-ecs-middleware"
+	edns0_ecs "github.com/CumpsD/traefik-edns0-ecs-middleware"
 )
 
 func TestDemo(t *testing.T) {
