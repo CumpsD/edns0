@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cumpsd/traefik-edns0-ecs-middleware"
+	edns0_ecs "github.com/cumpsd/traefik-edns0-ecs-middleware"
 )
 
 func TestDemo(t *testing.T) {
@@ -14,6 +14,7 @@ func TestDemo(t *testing.T) {
 	next := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})
 
 	cfg := edns0_ecs.CreateConfig()
+	cfg.Prefix = "TESTPREFIX"
 
 	handler, err := edns0_ecs.New(ctx, next, cfg, "edns0-ecs")
 	if err != nil {
